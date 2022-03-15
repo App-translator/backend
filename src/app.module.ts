@@ -12,6 +12,7 @@ import { RoleModule } from './role/role.module';
 import { TranslationModule } from './translation/translation.module';
 import { User } from './user/User';
 import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { UserModule } from './user/user.module';
     TranslationModule,
     LanguageModule,
     KeyModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
