@@ -9,7 +9,7 @@ export class User {
   email: string;
 
   @Column()
-  password: string;
+  password?: string;
 
   @Column()
   firstName: string;
@@ -19,4 +19,10 @@ export class User {
 
   @Column()
   isAdmin: boolean;
+
+  @Column({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date;
+
+  @Column({ type: 'datetime', nullable: true })
+  updatedAt: Date;
 }
